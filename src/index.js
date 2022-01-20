@@ -3,12 +3,18 @@ import ReactDOM from "react-dom";
 
 import "./index.css";
 
-function TaskList() {
+function Task(props) {
+  return (
+    <li>{props.taskName}</li>
+  );
+}
+
+function TaskLists() {
   return (
     <ul>
-      <li>Task 1</li>
-      <li>Task 2</li>
-      <li>Task 3</li>
+      <Task taskName="Task 1"></Task>
+      <Task taskName="Task 2"></Task>
+      <Task taskName="Task 3"></Task>
     </ul>
   );
 }
@@ -23,7 +29,7 @@ function App() {
       <header className="app-header">
         <h1>To-do List</h1>
         <p style={p_style}>Simple to-do list react-app</p>
-        <TaskList/>
+        <TaskLists/>
       </header>
     </div>
   )
