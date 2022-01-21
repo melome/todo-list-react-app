@@ -24,10 +24,16 @@ body {
  }
 
  ul {
-   list-style: none;
+  list-style: none;
  }
 
- li {
-   border: .5px solid rgb(255, 255, 255);
-   margin: 5px auto;
+ .task-input {
+  width: 100%;
+  margin-bottom: 15px;
+  border: 1px solid rgb(60, 148, 219);
+ }
+
+ .tasks-item {
+  border: .5px solid rgb(255, 255, 255);
+  margin: 5px auto;
  }

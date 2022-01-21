@@ -5,17 +5,26 @@ import "./index.css";
 
 function Task(props) {
   return (
-    <li>{props.taskName}</li>
+    <li className="tasks-item">{props.taskName}</li>
   );
 }
 
 function TaskLists() {
+const taskItemList = [
+  "Task 1",
+  "Task 2",
+  "Task 3"
+];
+
   return (
-    <ul>
-      <Task taskName="Task 1"></Task>
-      <Task taskName="Task 2"></Task>
-      <Task taskName="Task 3"></Task>
-    </ul>
+    <div>
+      <input className="task-input"/>
+      <ul>
+        {taskItemList.map((task, index) => {
+          return <Task key={index} taskName={task}></Task>;
+        })}
+      </ul>
+    </div>
   );
 }
 
